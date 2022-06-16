@@ -10,5 +10,5 @@ services:
         volumes:
             # - ./:/var/www
             - ./docker/nginx/:/etc/nginx/sites-available
-            - ./docker/nginx/:/etc/nginx/sites-enabled
+            # - ./docker/nginx/:/etc/nginx/sites-enabled
             # - ./certs:/
