@@ -5,7 +5,7 @@ usermod -aG docker rogerio
 usermod -aG ssh rogerio
 
 #acessa com usuario novo
-su - rogerio
+#su - rogerio
 
 #chave ssh
 mkdir /home/rogerio 
@@ -17,9 +17,9 @@ chown rogerio /home/rogerio/.ssh/authorized_keys
 chmod 600 /home/rogerio/.ssh/authorized_keys
 
 #desabilita acesso root
-echo "PermitRootLogin no" >> /etc/ssh/sshd_config
-echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
-sudo service sshd restart
+#sudo echo "PermitRootLogin no" >> /etc/ssh/sshd_config
+#sudo echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
+#sudo service sshd restart
 
 #SWAP
 sudo fallocate -l 2G /swapfile
@@ -27,14 +27,14 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo cp /etc/fstab /etc/fstab.bak
-echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+sudo echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 sudo sysctl vm.swappiness=10
 sudo sysctl vm.vfs_cache_pressure=50
-echo "vm.swappiness=10" >> /etc/sysctl.conf
-echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf
+sudo echo "vm.swappiness=10" >> /etc/sysctl.conf
+sudo echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf
 
 #monitoring
-curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
+#curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
 
 #firewall
 sudo ufw allow OpenSSH
