@@ -10,5 +10,5 @@ services:
         volumes:
             # - ./:/var/www
             - ./docker/nginx/config:/etc/nginx/conf.d
-            - ./docker/nginx/:/var/www
+            - ./docker/nginx/html:/var/www/html
             # - ./certs:/
