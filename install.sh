@@ -37,8 +37,8 @@ sudo echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf
 #curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
 
 #firewall
-sudo ufw allow OpenSSH
-sudo ufw enable
+#sudo ufw allow OpenSSH
+#sudo ufw enable
 
 #update
 sudo apt-get update
