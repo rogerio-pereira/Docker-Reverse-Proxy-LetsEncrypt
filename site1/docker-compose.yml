@@ -22,9 +22,9 @@ services:
         restart: unless-stopped
         environment:
             VIRTUAL_PORT: ${APP_PORT}
-            VIRTUAL_HOST: site1.beawebartisan.com
-            LETSENCRYPT_HOST: site1.beawebartisan.com
-            LETSENCRYPT_EMAIL: hi@rogeriopereira.dev
+            VIRTUAL_HOST: site1.colmeiatecnologia.com.br
+            LETSENCRYPT_HOST: site1.colmeiatecnologia.com.br
+            LETSENCRYPT_EMAIL: administracao@colmeiatecnologia.com.br
         ports:
             - ${APP_PORT}:80
 #            - ${SSL_PORT}:443
