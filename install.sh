@@ -40,7 +40,12 @@ sudo echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf
 sudo ufw allow OpenSSH
 sudo ufw enable
 
-#update and reboot
+#update
 sudo apt-get update
 sudo apt-get upgrade -y
+
+#create network
+docker network create nginx-proxy
+
+#reboot
 reboot
