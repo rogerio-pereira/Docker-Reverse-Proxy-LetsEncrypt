@@ -9,6 +9,6 @@ services:
              - 443:443
         volumes:
             # - ./:/var/www
-            - ./docker/nginx/:/etc/nginx/sites-available
+            - ./docker/nginx/:/etc/nginx/conf.d
             # - ./docker/nginx/:/etc/nginx/sites-enabled
             # - ./certs:/
