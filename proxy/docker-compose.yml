@@ -4,14 +4,21 @@ services:
     nginx-proxy:
         image: nginx:alpine
         restart: unless-stopped
-        build: 
-            context: ./
-            dockerfile: Dockerfile
+        # build: 
+        #     context: ./
+        #     dockerfile: Dockerfile
         ports:
              - 80:80
-             - 443:443
+            #  - 443:443
         volumes:
             # - ./:/var/www
             - ./docker/nginx/config:/etc/nginx/conf.d
-            - ./docker/nginx/html:/var/www/html
-            - ./certs:/
+            # - ./docker/nginx/html:/var/www/html
+            # - ./certs:/
+        networks:
+            - proxy
+    
+networks:
+    proxy:
+        driver: bridge
+        external: true
