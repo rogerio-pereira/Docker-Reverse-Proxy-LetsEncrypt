@@ -13,7 +13,7 @@ services:
         volumes:
             # - ./:/var/www
             - ./docker/nginx/config:/etc/nginx/conf.d
-            # - ./docker/nginx/html:/var/www/html
+            - ./docker/nginx/html:/var/www/html
             # - ./certs:/
         networks:
             - proxy
