@@ -45,7 +45,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 #create network
-docker network create nginx-proxy
+docker network create proxy
 
 #reboot
 reboot
