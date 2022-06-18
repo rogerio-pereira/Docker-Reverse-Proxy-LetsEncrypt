@@ -17,6 +17,17 @@ services:
             # - ./certs:/
         networks:
             - proxy
+    #nginx
+    # letsencrypt:
+    #     build: 
+    #         context: ./
+    #         dockerfile: Dockerfile
+    #     volumes:
+    #         - ./docker/nginx/config:/etc/nginx/conf.d
+    #     networks:
+    #         - proxy
+    #     depends_on:
+    #         - nginx-proxy
     
 networks:
     proxy:
