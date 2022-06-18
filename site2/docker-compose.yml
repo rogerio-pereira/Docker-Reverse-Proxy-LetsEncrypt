@@ -22,8 +22,8 @@ services:
         restart: unless-stopped
         environment:
             VIRTUAL_PORT: 80
-            VIRTUAL_HOST: site6.beawebartisan.com
-            LETSENCRYPT_HOST: site6.beawebartisan.com
+            VIRTUAL_HOST: site8.beawebartisan.com
+            LETSENCRYPT_HOST: site8.beawebartisan.com
             LETSENCRYPT_EMAIL: administracao@colmeiatecnologia.com.br
         ports:
             - ${APP_PORT}:80
