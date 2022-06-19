@@ -4,9 +4,9 @@ services:
     nginx-proxy:
         image: nginx:alpine
         restart: unless-stopped
-        build: 
-            context: ./
-            dockerfile: Dockerfile
+        # build: 
+        #     context: ./
+        #     dockerfile: Dockerfile
         ports:
              - 80:80
              - 443:443
@@ -17,17 +17,17 @@ services:
             # - ./certs:/
         networks:
             - proxy
-    #nginx
-    # letsencrypt:
-    #     build: 
-    #         context: ./
-    #         dockerfile: Dockerfile
-    #     volumes:
-    #         - ./docker/nginx/config:/etc/nginx/conf.d
-    #     networks:
-    #         - proxy
-    #     depends_on:
-    #         - nginx-proxy
+    nginx
+    letsencrypt:
+        build: 
+            context: ./
+            dockerfile: Dockerfile
+        volumes:
+            - ./docker/nginx/config:/etc/nginx/conf.d
+        networks:
+            - proxy
+        depends_on:
+            - nginx-proxy
     
 networks:
     proxy:
