@@ -12,7 +12,7 @@ services:
              - 443:443
         volumes:
             # - ./:/var/www
-            - ./docker/nginx/config:/etc/nginx/conf.d
+            - ./docker/nginx/config:/etc/nginx/site-available
             - ./docker/nginx/html:/var/www/html
             # - ./certs:/etc/letsencrypt
         networks:
