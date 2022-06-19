@@ -2,11 +2,11 @@ version: "3.7"
 services: 
     #nginx
     nginx-proxy:
-        image: ubuntu/nginx
+        image: nginx:alpine
         restart: unless-stopped
-        build: 
-            context: ./
-            dockerfile: Dockerfile
+        # build: 
+        #     context: ./
+        #     dockerfile: Dockerfile
         ports:
              - 80:80
             #  - 443:443
