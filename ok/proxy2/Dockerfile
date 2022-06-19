@@ -10,11 +10,11 @@ RUN apt-get install -y certbot python3-certbot-nginx
 RUN rm -fr /etc/nginx/sites-available/default
 RUN rm -fr /etc/nginx/sites-enabled/default
 
-# RUN sudo certbot --nginx -n --redirect --agree-to \ 
-#     -d beawebartisan.com \
-#     -d site7.beawebartisan.com \
-#     -d site8.beawebartisan.com \
-#     -m hi@rogeriopereira.dev
+RUN sudo certbot --nginx -n --redirect --agree-to \ 
+    -d beawebartisan.com \
+    -d site7.beawebartisan.com \
+    -d site8.beawebartisan.com \
+    -m hi@rogeriopereira.dev
 
 RUN service nginx restart
 
