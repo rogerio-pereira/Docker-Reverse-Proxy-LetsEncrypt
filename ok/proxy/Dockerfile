@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM ubuntu/nginx
 
 RUN add-apt-repository ppa:certbot/certbot -y
 RUN apt-get update
