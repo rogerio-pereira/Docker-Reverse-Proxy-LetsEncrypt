@@ -7,8 +7,8 @@ RUN apt-get update
 RUN apt-get install -y certbot python3-certbot-nginx
 
 #remove default config
-#RUN rm /etc/nginx/sites-available/default
-#RUN rm /etc/nginx/sites-enabled/default
+RUN rm -fr /etc/nginx/sites-available/default
+RUN rm -fr /etc/nginx/sites-enabled/default
 
 # RUN sudo certbot --nginx -n --redirect --agree-to \ 
 #     -d beawebartisan.com \
