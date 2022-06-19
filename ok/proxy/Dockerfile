@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM ubuntu:nginx
 
 RUN apt-get update
 RUN apt install software-properties-common
