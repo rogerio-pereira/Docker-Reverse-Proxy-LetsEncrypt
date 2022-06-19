@@ -34,5 +34,5 @@ networks:
     proxy:
         driver: bridge
         external: true
-volume:
+volumes:
     certs:
