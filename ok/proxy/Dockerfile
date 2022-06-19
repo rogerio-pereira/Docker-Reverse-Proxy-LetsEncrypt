@@ -1,7 +1,7 @@
 FROM ubuntu/nginx
 
 RUN apt-get update
-RUN apt install software-properties-common
+RUN sudo apt update
 RUN add-apt-repository ppa:certbot/certbot -y
 RUN apt-get update
 RUN apt-get install -y \
