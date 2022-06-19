@@ -17,6 +17,7 @@ services:
             # - ./certs:/
         networks:
             - proxy
+    #nginx
     # letsencrypt:
     #     build: 
     #         context: ./
