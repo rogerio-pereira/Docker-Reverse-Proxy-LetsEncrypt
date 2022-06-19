@@ -22,9 +22,9 @@ services:
         build: 
             context: ./
             dockerfile: Dockerfile
-        volumes:
-            - ./docker/nginx/config:/etc/nginx/conf.d
-            - ./certs:/etc/letsencrypt
+        # volumes:
+            # - ./docker/nginx/config:/etc/nginx/conf.d
+            # - ./certs:/etc/letsencrypt
         networks:
             - proxy
         depends_on:
