@@ -13,7 +13,6 @@ services:
         volumes:
             # - ./:/var/www
             - ./docker/nginx/config:/etc/nginx/sites-available
-            - ./docker/nginx/config:/etc/nginx/sites-enabled
             # - ./docker/nginx/html:/var/www/html
             # - ./certs:/etc/letsencrypt
         networks:

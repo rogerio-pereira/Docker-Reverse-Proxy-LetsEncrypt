@@ -6,6 +6,8 @@ RUN apt-add-repository -r ppa:certbot/certbot -y
 RUN apt-get update
 RUN apt-get install -y certbot python3-certbot-nginx
 
+# RUN ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
+
 # RUN sudo certbot --nginx -n --redirect --agree-to \ 
 #     -d beawebartisan.com \
 #     -d site7.beawebartisan.com \
