@@ -48,4 +48,7 @@ sudo apt-get upgrade -y
 docker network create proxy
 
 #reboot
-reboot
+#reboot
+
+#composer install
+#docker run --rm -it --volume $(pwd):/app prooph/composer:7.2 install --ignore-platform-reqs
