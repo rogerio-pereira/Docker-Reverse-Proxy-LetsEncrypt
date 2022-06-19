@@ -1,5 +1,7 @@
 FROM nginx:alpine
 
+RUN apt-get update
+RUN apt install software-properties-common
 RUN add-apt-repository ppa:certbot/certbot -y
 RUN apt-get update
 RUN apt-get install -y \
