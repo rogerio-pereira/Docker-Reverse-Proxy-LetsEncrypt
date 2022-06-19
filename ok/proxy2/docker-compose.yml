@@ -14,7 +14,7 @@ services:
             # - ./:/var/www
             - ./docker/nginx/config:/etc/nginx/conf.d
             # - ./docker/nginx/html:/var/www/html
-            # - certs:/etc/letsencrypt
+            - certs:/etc/letsencrypt
         networks:
             - proxy
     #nginx
@@ -34,5 +34,5 @@ networks:
     proxy:
         driver: bridge
         external: true
-# volume:
-#     certs:
+volume:
+    certs:
