@@ -1,8 +1,8 @@
-FROM ubuntu
+FROM nginx:alpine
 
-RUN sudo add-apt-repository ppa:certbot/certbot -y
-RUN sudo apt-get update
-RUN sudo apt-get update && apt-get install -y \
+RUN add-apt-repository ppa:certbot/certbot -y
+RUN apt-get update
+RUN apt-get update && apt-get install -y \
     python-certbot-nginx
 
 # RUN sudo certbot --nginx -n --redirect \ 
