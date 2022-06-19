@@ -16,4 +16,6 @@ RUN rm /etc/nginx/sites-enabled/default
 #     -d site8.beawebartisan.com \
 #     -m hi@rogeriopereira.dev
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+RUN service nginx restart
+
+# ENTRYPOINT ["tail", "-f", "/dev/null"]
