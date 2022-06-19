@@ -14,7 +14,7 @@ services:
             # - ./:/var/www
             - ./docker/nginx/config:/etc/nginx/conf.d
             - ./docker/nginx/html:/var/www/html
-            - ./certs:/etc/letsencrypt/live
+            - ./certs:/etc/letsencrypt
         networks:
             - proxy
     #nginx
@@ -24,7 +24,7 @@ services:
             dockerfile: Dockerfile
         volumes:
             - ./docker/nginx/config:/etc/nginx/conf.d
-            - ./certs:/etc/letsencrypt/live
+            - ./certs:/etc/letsencrypt
         networks:
             - proxy
         depends_on:
