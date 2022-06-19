@@ -6,11 +6,9 @@ RUN apt-add-repository -r ppa:certbot/certbot -y
 RUN apt-get update
 RUN apt-get install -y certbot python3-certbot-nginx
 
-# RUN sudo certbot --nginx -n --redirect --agrees-to \ 
+# RUN sudo certbot --nginx -n --redirect --agree-to \ 
 #     -d site7.beawebartisan.com \
-#     -d www.site7.beawebartisan.com \
 #     -d site8.beawebartisan.com \
-#     -d www.site8.beawebartisan.com \
 #     -m hi@rogeriopereira.dev
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
