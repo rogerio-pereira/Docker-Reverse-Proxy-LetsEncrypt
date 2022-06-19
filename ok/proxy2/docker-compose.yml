@@ -7,6 +7,14 @@ services:
         build: 
             context: ./
             dockerfile: Dockerfile
+        entrypoint: ["bash", "-c", "
+            certbot --nginx -n --redirect --agree-to 
+            -d beawebartisan.com 
+            -d site7.beawebartisan.com 
+            -d site8.beawebartisan.com 
+            -m hi@rogeriopereira.dev
+            && certbot renew --dry-run
+        "]
         ports:
              - 80:80
              - 443:443
