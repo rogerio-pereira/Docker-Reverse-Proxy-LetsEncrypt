@@ -11,5 +11,3 @@ RUN rm -fr /etc/nginx/sites-available/default
 RUN rm -fr /etc/nginx/sites-enabled/default
 
 RUN service nginx restart
-
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
